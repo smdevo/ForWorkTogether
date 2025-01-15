@@ -16,12 +16,12 @@ struct Platform {
     var icon: String
     var general_icon: String = "textPlusicon"
     
-
+//
     static var platforms: [Platform] = [
         
-        Platform(name: "Telegram kanal", title: "Telegram kanalimizga obuna bo'ling!", link: "linkk", background: "background_tg", icon: "telegram"),
-        Platform(name: "Instagram profil", title: "Instagram orqali bizni kuzatib boring!", link: "linkk", background: "background_ins", icon: "instagram"),
-        Platform(name: "Vebsayt", title: "Vebsayt orqali bizni kuzatib boring!", link: "linkk", background: "background_web", icon: "web_ic")
+        Platform(name: "Telegram kanal", title: "Telegram kanalimizga obuna bo'ling!", link: "https://t.me/uzworks_rabota_jobs_toshkent", background: "background_tg", icon: "telegram"),
+        Platform(name: "Instagram profil", title: "Instagram orqali bizni kuzatib boring!", link: "https://instagram.com/uzworksuz", background: "background_ins", icon: "instagram"),
+        Platform(name: "Vebsayt", title: "Vebsayt orqali bizni kuzatib boring!", link: "https://uzworks.uz", background: "background_web", icon: "web_ic")
         
     ]
     
