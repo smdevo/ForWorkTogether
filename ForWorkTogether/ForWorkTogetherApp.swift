@@ -11,7 +11,7 @@ import SwiftUI
 struct ForWorkTogetherApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ChangingView()
         }
     }
 }
