@@ -13,18 +13,20 @@ struct PlatformView: View {
     
     var body: some View {
         
-        ZStack {
-            
-            backgroundView
-            
-            contentsView
-            
+        if let url = URL(string: platform.link) {
+            Link(destination: url) {
+                wholeView
+            }
+        }else
+        {
+            wholeView
         }
-        .frame(height: UIDevice.iPad ? 200 : 126)
-        .frame(maxWidth: .infinity)
-        .padding(.horizontal)
-    }
-}
+        
+        
+        
+      }//body
+    }//PlatformView
+
 
 struct PlatformView_Previews: PreviewProvider {
     static var previews: some View {
@@ -43,6 +45,26 @@ extension PlatformView {
         Image(platform.background)
             .resizable()
             .cornerRadius(UIDevice.iPad ? 50 : 26)
+        
+    }
+    
+    
+    
+    //contents
+    
+    
+    var wholeView: some View {
+        
+        ZStack {
+            
+            backgroundView
+            
+            contentsView
+            
+        }
+        .frame(height: UIDevice.iPad ? 200 : 126)
+        .frame(maxWidth: .infinity)
+        .padding(.horizontal)
         
     }
     
