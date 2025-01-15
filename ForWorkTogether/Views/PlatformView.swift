@@ -20,7 +20,7 @@ struct PlatformView: View {
             contentsView
             
         }
-        .frame(height: 126)
+        .frame(height: UIDevice.iPad ? 200 : 126)
         .frame(maxWidth: .infinity)
         .padding(.horizontal)
     }
@@ -42,7 +42,7 @@ extension PlatformView {
         
         Image(platform.background)
             .resizable()
-            .cornerRadius(19)
+            .cornerRadius(UIDevice.iPad ? 50 : 26)
         
     }
     
@@ -55,22 +55,22 @@ extension PlatformView {
                 Image(platform.general_icon)
                     .resizable()
                     .scaledToFit()
-                    .frame(height: 30)
-                    .font(.system(size: 30))
+                    .frame(height: UIDevice.iPad ? 60 : 30)
                 
                 Spacer()
                 
                 ZStack {
-                    Color.white.cornerRadius(13)
+                    Color.white.cornerRadius(UIDevice.iPad ? 30 : 13)
                         .shadow(radius: 3, x: -3, y: -3)
                         
                     Text(platform.name)
                         .foregroundColor(Color("allColor"))
-                        .font(.system(size: 20, weight: .bold, design: .default))
+                        .font(.system(size: UIDevice.iPad ? 40 : 20, weight: .bold, design: .default))
+                        .padding(.horizontal, UIDevice.iPad ? 10 : 0)
                         
                     
                 }
-                .frame(maxWidth: 160)
+                .frame(maxWidth: UIDevice.iPad ? 350 : 155)
                 
                 
             } // 1st HStack
@@ -83,16 +83,17 @@ extension PlatformView {
                 Image(platform.icon)
                     .resizable()
                     .scaledToFill()
-                    .frame(width: 50, height: 50)
+                    .frame(width: UIDevice.iPad ? 75 : 50, height: UIDevice.iPad ? 75 : 50)
+                    .padding(.trailing,UIDevice.iPad ? 20 : 10)
                 
-                Spacer()
+                //Spacer()
                 
                 //Spacer()
                 
                 Text(platform.title)
                     .foregroundColor(Color.white)
                     .bold()
-                    .font(.system(size: 18, weight: .bold, design: .default))
+                    .font(.system(size: UIDevice.iPad ? 45 : 18, weight: .medium, design: .default))
                     .lineLimit(2)
                 Spacer()
                 Spacer()
@@ -101,6 +102,7 @@ extension PlatformView {
             
         } // VStack
         .padding()
+        .padding(UIDevice.iPad ? 20 : 0)
         
     }
     

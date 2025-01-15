@@ -14,10 +14,40 @@ struct ChangingView: View {
     @State private var timer: Timer? = nil
 
     var body: some View {
-        //The view that scrolls itself
-        tabview
+       
+       // if UIDevice.current.userInterfaceIdiom == .phone {
+            
+            TabView(selection: $selectedIndex) {
+                ForEach(0..<views.count, id: \.self) { i in
+                    
+                    PlatformView(platform: Platform.platforms[i])
+                        .tag(i)
+                        .onTapGesture {
+                            print("\(i)")
+                        }
+                }
+            }
+            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .automatic))
             .onAppear(perform: startTimer)
             .onDisappear(perform: stopTimer)
+            
+//        }else {
+//
+//            HStack {
+//
+//                ForEach(0..<views.count, id: \.self) { i in
+//
+//                    PlatformView(platform: Platform.platforms[i])
+//                        .onTapGesture {
+//                            print("\(i)")
+//                        }
+//                }
+//
+//            }
+//
+//        }
+        
+        
     }//body
 }
 
@@ -53,23 +83,46 @@ extension ChangingView {
 
 //MARK: SubViews extension
 
-extension ChangingView {
-    
-    
-    var tabview: some View {
-        
-        TabView(selection: $selectedIndex) {
-            ForEach(0..<views.count, id: \.self) { i in
-                
-                PlatformView(platform: Platform.platforms[i])
-                    .tag(i)
-                    .onTapGesture {
-                        print("\(i)")
-                    }
-            }
-        }
-        .tabViewStyle(PageTabViewStyle(indexDisplayMode: .automatic))
-        
-    }
-    
-}
+//extension ChangingView {
+//
+//
+//    var tabview: some View {
+//
+//
+//        if UIDevice.current.userInterfaceIdiom == .phone {
+//
+//            TabView(selection: $selectedIndex) {
+//                ForEach(0..<views.count, id: \.self) { i in
+//
+//                    PlatformView(platform: Platform.platforms[i])
+//                        .tag(i)
+//                        .onTapGesture {
+//                            print("\(i)")
+//                        }
+//                }
+//            }
+//            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .automatic))
+//            .onAppear(perform: startTimer)
+//            .onDisappear(perform: stopTimer)
+//
+//        }else {
+//
+//            HStack {
+//
+//                ForEach(0..<views.count, id: \.self) { i in
+//
+//                    PlatformView(platform: Platform.platforms[i])
+//                        .onTapGesture {
+//                            print("\(i)")
+//                        }
+//                }
+//
+//            }
+//
+//        }
+//
+//
+//
+//    }
+//
+//}

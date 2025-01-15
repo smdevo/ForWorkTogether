@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C03E1422D37A52A0074792C /* ForDevices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C03E1412D37A52A0074792C /* ForDevices.swift */; };
 		7C9C69E82D36F26B00DF65BB /* PlatformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9C69E72D36F26B00DF65BB /* PlatformView.swift */; };
 		7C9C69EA2D36F28B00DF65BB /* ChangingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9C69E92D36F28B00DF65BB /* ChangingView.swift */; };
 		7C9C69ED2D36F2BC00DF65BB /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9C69EC2D36F2BC00DF65BB /* Platform.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7C03E1412D37A52A0074792C /* ForDevices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForDevices.swift; sourceTree = "<group>"; };
 		7C9C69E72D36F26B00DF65BB /* PlatformView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformView.swift; sourceTree = "<group>"; };
 		7C9C69E92D36F28B00DF65BB /* ChangingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangingView.swift; sourceTree = "<group>"; };
 		7C9C69EC2D36F2BC00DF65BB /* Platform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
@@ -38,6 +40,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7C03E1402D37A5180074792C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7C03E1412D37A52A0074792C /* ForDevices.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		7C9C69E62D36F24800DF65BB /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +84,7 @@
 		7CCE3B822D36AB89002BDCB6 /* ForWorkTogether */ = {
 			isa = PBXGroup;
 			children = (
+				7C03E1402D37A5180074792C /* Extensions */,
 				7CCE3B832D36AB89002BDCB6 /* ForWorkTogetherApp.swift */,
 				7CCE3B852D36AB89002BDCB6 /* ContentView.swift */,
 				7C9C69EB2D36F2A200DF65BB /* Models */,
@@ -163,6 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C9C69ED2D36F2BC00DF65BB /* Platform.swift in Sources */,
+				7C03E1422D37A52A0074792C /* ForDevices.swift in Sources */,
 				7C9C69E82D36F26B00DF65BB /* PlatformView.swift in Sources */,
 				7CCE3B862D36AB89002BDCB6 /* ContentView.swift in Sources */,
 				7CCE3B842D36AB89002BDCB6 /* ForWorkTogetherApp.swift in Sources */,
