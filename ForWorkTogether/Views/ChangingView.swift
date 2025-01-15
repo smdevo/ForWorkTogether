@@ -61,7 +61,7 @@ extension ChangingView {
         TabView(selection: $selectedIndex) {
             ForEach(0..<views.count, id: \.self) { i in
                 
-                CardView(platform: Platform.platforms[i])
+                PlatformView(platform: Platform.platforms[i])
                     .tag(i)
                     .onTapGesture {
                         print("\(i)")
